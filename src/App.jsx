@@ -53,76 +53,76 @@ const RETA_PHASES = [
 
 const PEPTIDE_LIBRARY = {
   "GLP-1 / Metabolic": [
-    { name:"Retatrutide", desc:"Triple agonist (GLP-1/GIP/glucagon). Most potent weight loss peptide. Reduces appetite, visceral fat, improves insulin sensitivity.", typicalDose:"0.5-5mg", unit:"mg", frequency:"2x/week", cycle:"Ongoing" },
-    { name:"Semaglutide", desc:"GLP-1 agonist. Appetite suppression and blood sugar control.", typicalDose:"0.25-2mg", unit:"mg", frequency:"Weekly", cycle:"Ongoing" },
-    { name:"Tirzepatide", desc:"Dual GLP-1/GIP agonist. Strong weight loss with muscle preservation.", typicalDose:"2.5-15mg", unit:"mg", frequency:"Weekly", cycle:"Ongoing" },
-    { name:"Liraglutide", desc:"GLP-1 agonist. Daily dosing. Good appetite control.", typicalDose:"0.6-3mg", unit:"mg", frequency:"Daily", cycle:"Ongoing" },
-    { name:"Oxyntomodulin", desc:"Dual GLP-1/glucagon agonist. Reduces appetite and increases energy expenditure.", typicalDose:"100-400mcg", unit:"mcg", frequency:"3x/day", cycle:"8-12 weeks" },
-    { name:"Cagrilintide", desc:"Long-acting amylin analogue. Reduces food intake and body weight.", typicalDose:"0.16-2.4mg", unit:"mg", frequency:"Weekly", cycle:"Ongoing" },
+    { name:"Retatrutide", desc:"Triple agonist (GLP-1/GIP/glucagon). Most potent weight loss peptide. Reduces appetite, visceral fat, improves insulin sensitivity.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Semaglutide", desc:"GLP-1 agonist. Appetite suppression and blood sugar control.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Tirzepatide", desc:"Dual GLP-1/GIP agonist. Strong weight loss with muscle preservation.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Liraglutide", desc:"GLP-1 agonist. Daily dosing. Good appetite control.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Oxyntomodulin", desc:"Dual GLP-1/glucagon agonist. Reduces appetite and increases energy expenditure.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Cagrilintide", desc:"Long-acting amylin analogue. Reduces food intake and body weight.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
   ],
   "GH Secretagogues": [
-    { name:"CJC-1295 / Ipamorelin", desc:"GHRH + GHRP stack. Boosts GH pulse, improves sleep and recovery.", typicalDose:"100-300mcg", unit:"mcg", frequency:"Pre-sleep daily", cycle:"8-12 weeks" },
-    { name:"CJC-1295 with DAC", desc:"GHRH analogue with Drug Affinity Complex. Extended half-life of 6-8 days. Sustained GH elevation.", typicalDose:"1-2mg", unit:"mg", frequency:"2x/week", cycle:"8-12 weeks" },
-    { name:"CJC-1295 No DAC", desc:"Mod GRF 1-29. Short-acting GHRH analogue. Preserves natural pulsatile GH release. Stack with GHRP.", typicalDose:"100-300mcg", unit:"mcg", frequency:"3x/day", cycle:"8-12 weeks" },
-    { name:"Ipamorelin", desc:"Selective GHRP. Clean GH pulse with minimal cortisol/prolactin.", typicalDose:"100-300mcg", unit:"mcg", frequency:"Daily", cycle:"8-12 weeks" },
-    { name:"Hexarelin", desc:"Potent GHRP. Strong GH release. Also cardioprotective properties.", typicalDose:"100-200mcg", unit:"mcg", frequency:"2-3x/day", cycle:"4-8 weeks" },
-    { name:"GHRP-2", desc:"Strong GH release. Increases appetite - useful for recomposition.", typicalDose:"100-300mcg", unit:"mcg", frequency:"3x/day", cycle:"4-12 weeks" },
-    { name:"GHRP-6", desc:"Potent hunger stimulus with GH release. Better for muscle gaining.", typicalDose:"100-300mcg", unit:"mcg", frequency:"3x/day", cycle:"4-12 weeks" },
-    { name:"MK-677 (Ibutamoren)", desc:"Oral GH secretagogue. 24hr GH elevation. Water retention common.", typicalDose:"10-25mg", unit:"mg", frequency:"Daily", cycle:"Ongoing" },
-    { name:"Sermorelin", desc:"GHRH analogue. Gentler GH stimulus. Good for anti-aging.", typicalDose:"200-500mcg", unit:"mcg", frequency:"Daily", cycle:"3-6 months" },
-    { name:"Tesamorelin", desc:"GHRH analogue. FDA-approved for visceral fat reduction.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"6-12 months" },
+    { name:"CJC-1295 / Ipamorelin", desc:"GHRH + GHRP stack. Boosts GH pulse, improves sleep and recovery.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"CJC-1295 with DAC", desc:"GHRH analogue with Drug Affinity Complex. Extended half-life of 6-8 days. Sustained GH elevation.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"CJC-1295 No DAC", desc:"Mod GRF 1-29. Short-acting GHRH analogue. Preserves natural pulsatile GH release. Stack with GHRP.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Ipamorelin", desc:"Selective GHRP. Clean GH pulse with minimal cortisol/prolactin.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Hexarelin", desc:"Potent GHRP. Strong GH release. Also cardioprotective properties.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"GHRP-2", desc:"Strong GH release. Increases appetite - useful for recomposition.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"GHRP-6", desc:"Potent hunger stimulus with GH release. Better for muscle gaining.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"MK-677 (Ibutamoren)", desc:"Oral GH secretagogue. 24hr GH elevation. Water retention common.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Sermorelin", desc:"GHRH analogue. Gentler GH stimulus. Good for anti-aging.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Tesamorelin", desc:"GHRH analogue. FDA-approved for visceral fat reduction.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
   ],
   "IGF / Growth Factors": [
-    { name:"IGF-1 LR3", desc:"Long-acting IGF-1 analogue. Promotes muscle growth, fat loss, and nutrient partitioning. More potent than standard IGF-1.", typicalDose:"20-100mcg", unit:"mcg", frequency:"Daily", cycle:"4-6 weeks" },
-    { name:"IGF-1 DES", desc:"Short-acting IGF-1 fragment. Local muscle growth when injected intramuscularly. Fast acting.", typicalDose:"20-50mcg", unit:"mcg", frequency:"Pre-workout", cycle:"4-6 weeks" },
-    { name:"MGF (Mechano Growth Factor)", desc:"IGF-1 splice variant. Stimulates satellite cells for local muscle repair and growth.", typicalDose:"100-200mcg", unit:"mcg", frequency:"Post-workout", cycle:"4-8 weeks" },
-    { name:"PEG-MGF", desc:"PEGylated MGF. Extended half-life version. Systemic muscle growth stimulus.", typicalDose:"200-400mcg", unit:"mcg", frequency:"2x/week", cycle:"4-8 weeks" },
+    { name:"IGF-1 LR3", desc:"Long-acting IGF-1 analogue. Promotes muscle growth, fat loss, and nutrient partitioning. More potent than standard IGF-1.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"IGF-1 DES", desc:"Short-acting IGF-1 fragment. Local muscle growth when injected intramuscularly. Fast acting.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"MGF (Mechano Growth Factor)", desc:"IGF-1 splice variant. Stimulates satellite cells for local muscle repair and growth.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"PEG-MGF", desc:"PEGylated MGF. Extended half-life version. Systemic muscle growth stimulus.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
   ],
   "Fat Loss": [
-    { name:"AOD-9604", desc:"HGH fragment. Fat burning without GH side effects.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily", cycle:"8-12 weeks" },
-    { name:"Fragment 176-191", desc:"Fat-burning HGH fragment. Lipolysis without IGF-1 elevation.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily", cycle:"8-12 weeks" },
-    { name:"5-Amino-1MQ", desc:"NNMT inhibitor. Activates dormant fat cells, improves metabolic rate and muscle mass.", typicalDose:"50-100mg", unit:"mg", frequency:"Daily", cycle:"8-12 weeks" },
-    { name:"Adipotide (FTPP)", desc:"Targets and destroys blood vessels feeding fat cells. Aggressive fat loss. Use with caution.", typicalDose:"0.5-1mg", unit:"mg", frequency:"Daily", cycle:"4-6 weeks" },
+    { name:"AOD-9604", desc:"HGH fragment. Fat burning without GH side effects.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Fragment 176-191", desc:"Fat-burning HGH fragment. Lipolysis without IGF-1 elevation.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"5-Amino-1MQ", desc:"NNMT inhibitor. Activates dormant fat cells, improves metabolic rate and muscle mass.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Adipotide (FTPP)", desc:"Targets and destroys blood vessels feeding fat cells. Aggressive fat loss. Use with caution.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
   ],
   "Tissue Repair": [
-    { name:"BPC-157", desc:"Body Protection Compound. Heals gut, tendons, ligaments. Helps GI side effects from GLP-1.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily or BID", cycle:"4-12 weeks" },
-    { name:"TB-500 (Thymosin Beta-4)", desc:"Systemic tissue repair. Reduces inflammation, accelerates healing.", typicalDose:"2-5mg", unit:"mg", frequency:"2x/week loading", cycle:"4-6 weeks" },
-    { name:"TB-4 Fragment", desc:"Ac-SDKP fragment of Thymosin Beta-4. Anti-inflammatory, cardiac and kidney protection.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"WOLVERINE STACK", desc:"Combined stack for maximum healing. Synergistic local + systemic.", typicalDose:"250mcg / 2mg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"Pentadeca Arginate (PDA)", desc:"BPC-157 derivative. Enhanced tissue repair, gut healing, and anti-inflammatory. More stable than BPC-157.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily", cycle:"4-12 weeks" },
-    { name:"KPV", desc:"Anti-inflammatory tripeptide. Gut healing, skin conditions, IBD.", typicalDose:"500mcg-1mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"GHK-Cu", desc:"Copper peptide. Skin regeneration, collagen synthesis, anti-aging.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"8-12 weeks" },
-    { name:"LL-37", desc:"Antimicrobial peptide. Immune modulation, wound healing, anti-biofilm.", typicalDose:"100-500mcg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"Thymosin Alpha-1", desc:"Immune modulator. Used in cancer/viral protocols.", typicalDose:"1.6mg", unit:"mg", frequency:"2x/week", cycle:"6-12 months" },
-    { name:"GLOW (GHK-Cu + BPC-157 + TB-500)", desc:"Recovery + skin blend. GHK-Cu for collagen/skin, BPC-157 and TB-500 for systemic healing. Popular all-in-one repair and anti-aging stack.", typicalDose:"Per blend", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"KLOW (GHK-Cu + BPC-157 + TB-500 + KPV)", desc:"Enhanced GLOW with KPV added for extra anti-inflammatory and gut/skin healing. Comprehensive recovery, skin, and gut repair blend.", typicalDose:"Per blend", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
+    { name:"BPC-157", desc:"Body Protection Compound. Heals gut, tendons, ligaments. Helps GI side effects from GLP-1.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"TB-500 (Thymosin Beta-4)", desc:"Systemic tissue repair. Reduces inflammation, accelerates healing.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"TB-4 Fragment", desc:"Ac-SDKP fragment of Thymosin Beta-4. Anti-inflammatory, cardiac and kidney protection.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Wolverine Stack (BPC-157 + TB-500)", desc:"Combined stack for maximum healing. Synergistic local and systemic tissue repair. Known as the Wolverine stack.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Pentadeca Arginate (PDA)", desc:"BPC-157 derivative. Enhanced tissue repair, gut healing, and anti-inflammatory. More stable than BPC-157.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"KPV", desc:"Anti-inflammatory tripeptide. Gut healing, skin conditions, IBD.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"GHK-Cu", desc:"Copper peptide. Skin regeneration, collagen synthesis, anti-aging.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"LL-37", desc:"Antimicrobial peptide. Immune modulation, wound healing, anti-biofilm.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Thymosin Alpha-1", desc:"Immune modulator. Used in cancer/viral protocols.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"GLOW (GHK-Cu + BPC-157 + TB-500)", desc:"Recovery and skin blend. GHK-Cu drives collagen and skin regeneration while BPC-157 and TB-500 handle systemic tissue healing. All-in-one repair and anti-aging stack.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"KLOW (GHK-Cu + BPC-157 + TB-500 + KPV)", desc:"Enhanced GLOW blend with KPV added for extra anti-inflammatory action and gut and skin healing. Comprehensive recovery, skin, and gut repair stack.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
   ],
   "Mitochondrial / Longevity": [
-    { name:"NAD+", desc:"Cellular energy and DNA repair coenzyme. Boosts mitochondrial function, metabolism, and longevity. Subcutaneous injection, go slow — fast dosing causes flushing/nausea.", typicalDose:"50-100mg", unit:"mg", frequency:"Daily or 2-3x/week", cycle:"Ongoing" },
-    { name:"MOTS-c", desc:"Mitochondrial peptide. AMPK activation. Boosts fat oxidation and insulin sensitivity.", typicalDose:"5-10mg", unit:"mg", frequency:"Weekly", cycle:"8-12 wk on, 4mo off" },
-    { name:"Humanin", desc:"Mitochondria-derived. Neuroprotective, anti-aging, cardioprotective.", typicalDose:"2-4mg", unit:"mg", frequency:"Weekly", cycle:"8-12 weeks" },
-    { name:"SS-31 (Elamipretide)", desc:"Targets mitochondrial inner membrane. Reduces oxidative stress.", typicalDose:"1-4mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"Epitalon", desc:"Telomere lengthening peptide. Anti-aging, sleep quality, immune function.", typicalDose:"5-10mg", unit:"mg", frequency:"Daily x 10-20d", cycle:"1-2 cycles/year" },
-    { name:"Foxo4-DRI", desc:"Senolytic peptide. Targets and eliminates senescent cells. Anti-aging at cellular level.", typicalDose:"1-2mg", unit:"mg", frequency:"3x/week", cycle:"2-4 weeks" },
-    { name:"Thymulin", desc:"Thymus-derived peptide. Immune regulation, anti-inflammatory, thyroid support.", typicalDose:"10-50mcg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"Selank", desc:"Anxiolytic and nootropic. Modulates GABA and BDNF.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily", cycle:"2-4 weeks" },
-    { name:"Semax", desc:"ACTH analogue. Cognitive enhancer, neuroprotective, BDNF upregulation.", typicalDose:"200-600mcg", unit:"mcg", frequency:"Daily", cycle:"2-4 weeks" },
+    { name:"NAD+", desc:"Cellular energy and DNA repair coenzyme. Supports mitochondrial function, metabolism, and longevity. Typically injected subcutaneously and administered slowly.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"MOTS-c", desc:"Mitochondrial peptide. AMPK activation. Boosts fat oxidation and insulin sensitivity.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Humanin", desc:"Mitochondria-derived. Neuroprotective, anti-aging, cardioprotective.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"SS-31 (Elamipretide)", desc:"Targets mitochondrial inner membrane. Reduces oxidative stress.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Epitalon", desc:"Telomere lengthening peptide. Anti-aging, sleep quality, immune function.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Foxo4-DRI", desc:"Senolytic peptide. Targets and eliminates senescent cells. Anti-aging at cellular level.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Thymulin", desc:"Thymus-derived peptide. Immune regulation, anti-inflammatory, thyroid support.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Selank", desc:"Anxiolytic and nootropic. Modulates GABA and BDNF.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Semax", desc:"ACTH analogue. Cognitive enhancer, neuroprotective, BDNF upregulation.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
   ],
   "Cognitive / Mood": [
-    { name:"Dihexa", desc:"Extremely potent nootropic. BDNF-like activity. Long duration of action.", typicalDose:"10-20mg", unit:"mg", frequency:"Weekly", cycle:"4-8 weeks" },
-    { name:"NA-NAP (NAP)", desc:"Neuroprotective. ADNP-derived. Cognitive support, anti-inflammatory.", typicalDose:"50-200mcg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"Pinealon", desc:"Retinal/brain peptide. Sleep, anti-aging, neuroprotection.", typicalDose:"1-3mg", unit:"mg", frequency:"Daily x 10d", cycle:"2 cycles/year" },
-    { name:"DSIP (Delta Sleep Inducing Peptide)", desc:"Promotes deep slow-wave sleep. Reduces stress hormones. Improves sleep quality and recovery.", typicalDose:"100-300mcg", unit:"mcg", frequency:"Pre-sleep", cycle:"2-4 weeks" },
+    { name:"Dihexa", desc:"Extremely potent nootropic. BDNF-like activity. Long duration of action.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"NA-NAP (NAP)", desc:"Neuroprotective. ADNP-derived. Cognitive support, anti-inflammatory.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Pinealon", desc:"Retinal/brain peptide. Sleep, anti-aging, neuroprotection.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"DSIP (Delta Sleep Inducing Peptide)", desc:"Promotes deep slow-wave sleep. Reduces stress hormones. Improves sleep quality and recovery.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
   ],
   "Hormonal / Sexual Health": [
-    { name:"PT-141 (Bremelanotide)", desc:"Melanocortin agonist. Libido enhancement for men and women.", typicalDose:"1-2mg", unit:"mg", frequency:"As needed", cycle:"As needed" },
-    { name:"Kisspeptin-10", desc:"GnRH stimulator. Boosts LH/FSH and testosterone naturally.", typicalDose:"100-1000mcg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"Gonadorelin", desc:"GnRH analogue. Stimulates LH and FSH. Used to maintain natural testosterone production during TRT.", typicalDose:"100mcg", unit:"mcg", frequency:"2x/week", cycle:"Ongoing with TRT" },
-    { name:"Melanotan II", desc:"Melanocortin agonist. Tanning, libido, appetite suppression. Potent and long-lasting.", typicalDose:"0.5-1mg", unit:"mg", frequency:"As needed", cycle:"As needed" },
+    { name:"PT-141 (Bremelanotide)", desc:"Melanocortin agonist. Libido enhancement for men and women.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"Kisspeptin-10", desc:"GnRH stimulator. Boosts LH/FSH and testosterone naturally.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Gonadorelin", desc:"GnRH analogue. Stimulates LH and FSH. Used to maintain natural testosterone production during TRT.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
+    { name:"Melanotan II", desc:"Melanocortin agonist. Tanning, libido, appetite suppression. Potent and long-lasting.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
   ],
   "Cardiovascular / Other": [
-    { name:"Angiotensin 1-7", desc:"Cardioprotective. Vasodilation, anti-fibrotic, blood pressure support.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"VIP (Vasoactive Intestinal Peptide)", desc:"Anti-inflammatory, lung health, CIRS/mold illness protocols.", typicalDose:"50mcg", unit:"mcg", frequency:"Daily nasal", cycle:"Varies" },
+    { name:"Angiotensin 1-7", desc:"Cardioprotective. Vasodilation, anti-fibrotic, blood pressure support.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
+    { name:"VIP (Vasoactive Intestinal Peptide)", desc:"Anti-inflammatory, lung health, CIRS/mold illness protocols.", typicalDose:"", unit:"mcg", frequency:"", cycle:"" },
     { name:"Custom", desc:"Add your own peptide with custom dosing.", typicalDose:"", unit:"mg", frequency:"", cycle:"" },
   ],
 };
@@ -991,20 +991,7 @@ export default function App() {
     if(!bodyImage||!apiKey){setBodyError("Add API key in Settings.");return;}
     setBodyLoading(true);setBodyError("");
     try{
-      const small=await new Promise((resolve)=>{
-        const img=new Image();
-        img.onload=()=>{
-          const maxDim=1500;
-          let w=img.width,h=img.height;
-          if(w>h&&w>maxDim){h=Math.round(h*(maxDim/w));w=maxDim;}
-          else if(h>=w&&h>maxDim){w=Math.round(w*(maxDim/h));h=maxDim;}
-          const canvas=document.createElement("canvas");
-          canvas.width=w;canvas.height=h;
-          canvas.getContext("2d").drawImage(img,0,0,w,h);
-          resolve(canvas.toDataURL("image/jpeg",0.6));
-        };
-        img.src=bodyImage;
-      });
+      const small=await compressImage(bodyImage,1200,0.6);
       const base64=small.split(",")[1];
       const data=await callClaude(apiKey,{
         system:`You are reading a body composition scan result (InBody, DEXA, smart scale app, etc). Extract the numeric values you can clearly see. Return ONLY valid JSON, no markdown:
@@ -2490,7 +2477,7 @@ Build the workout.`;
                   {pepSearchResults.length===0&&<div style={{color:"#475569",fontSize:13,fontFamily:"monospace"}}>No results for "{pepSearch}"</div>}
                   {pepSearchResults.map(pep=>{
                     const cat=Object.entries(PEPTIDE_LIBRARY).find(([,v])=>v.some(p=>p.name===pep.name))?.[0];
-                    return(<button key={pep.name} onClick={()=>{setPendingPep({...pep,category:cat});setPepForm({dose:"",unit:pep.unit||"mg",frequency:pep.frequency||"",cycle:pep.cycle||"",notes:"",status:"active",pinDays:[],reminderEnabled:false,reminderTime:"08:00"});setPepView("add");}} style={{background:"#020617",border:`1px solid ${theme.primary}33`,borderRadius:12,padding:"12px 14px",color:"#e2e8f0",textAlign:"left",cursor:"pointer"}}><div style={{fontWeight:700,fontSize:14}}>{pep.name}</div><div style={{fontSize:11,color:"#64748b",fontFamily:"monospace",marginTop:2}}>{pep.typicalDose} · {pep.frequency}</div><div style={{fontSize:11,color:"#94a3b8",marginTop:4,lineHeight:1.5}}>{pep.desc}</div></button>);
+                    return(<button key={pep.name} onClick={()=>{setPendingPep({...pep,category:cat});setPepForm({dose:"",unit:pep.unit||"mg",frequency:pep.frequency||"",cycle:pep.cycle||"",notes:"",status:"active",pinDays:[],reminderEnabled:false,reminderTime:"08:00"});setPepView("add");}} style={{background:"#020617",border:`1px solid ${theme.primary}33`,borderRadius:12,padding:"12px 14px",color:"#e2e8f0",textAlign:"left",cursor:"pointer"}}><div style={{fontWeight:700,fontSize:14}}>{pep.name}</div><div style={{fontSize:11,color:"#94a3b8",marginTop:4,lineHeight:1.5}}>{pep.desc}</div></button>);
                   })}
                 </div>
               ):(
@@ -2504,7 +2491,7 @@ Build the workout.`;
             <>
               <button style={{...DS.btn,gridColumn:"unset",background:"#020617",border:"1px solid #334155",color:"#94a3b8",marginBottom:12}} onClick={()=>setPepView("cats")}>← Back</button>
               <div style={{display:"flex",flexDirection:"column",gap:8}}>
-                {PEPTIDE_LIBRARY[pepActiveCat].map(pep=>(<button key={pep.name} onClick={()=>{setPendingPep({...pep,category:pepActiveCat});setPepForm({dose:"",unit:pep.unit||"mg",frequency:pep.frequency||"",cycle:pep.cycle||"",notes:"",status:"active",pinDays:[],reminderEnabled:false,reminderTime:"08:00"});setPepView("add");}} style={{background:"#020617",border:`1px solid ${theme.primary}33`,borderRadius:12,padding:"12px 14px",color:"#e2e8f0",textAlign:"left",cursor:"pointer"}}><div style={{fontWeight:700,fontSize:14}}>{pep.name}</div><div style={{fontSize:11,color:"#64748b",fontFamily:"monospace",marginTop:2}}>{pep.typicalDose} · {pep.frequency}</div><div style={{fontSize:11,color:"#94a3b8",marginTop:4,lineHeight:1.5}}>{pep.desc}</div></button>))}
+                {PEPTIDE_LIBRARY[pepActiveCat].map(pep=>(<button key={pep.name} onClick={()=>{setPendingPep({...pep,category:pepActiveCat});setPepForm({dose:"",unit:pep.unit||"mg",frequency:pep.frequency||"",cycle:pep.cycle||"",notes:"",status:"active",pinDays:[],reminderEnabled:false,reminderTime:"08:00"});setPepView("add");}} style={{background:"#020617",border:`1px solid ${theme.primary}33`,borderRadius:12,padding:"12px 14px",color:"#e2e8f0",textAlign:"left",cursor:"pointer"}}><div style={{fontWeight:700,fontSize:14}}>{pep.name}</div><div style={{fontSize:11,color:"#94a3b8",marginTop:4,lineHeight:1.5}}>{pep.desc}</div></button>))}
               </div>
             </>
           )}
@@ -2512,12 +2499,11 @@ Build the workout.`;
             <div>
               <div style={{fontWeight:800,fontSize:16,color:"#f8fafc",marginBottom:4}}>{pendingPep.name}</div>
               <div style={{fontSize:12,color:"#64748b",fontFamily:"monospace",marginBottom:14,lineHeight:1.5}}>{pendingPep.desc}</div>
-              <div style={{background:"#020617",border:"1px solid #1e293b",borderRadius:8,padding:10,marginBottom:14,fontSize:11,color:"#94a3b8",fontFamily:"monospace"}}>Typical: {pendingPep.typicalDose} · {pendingPep.frequency} · Cycle: {pendingPep.cycle}</div>
               <div style={formGrid}>
                 <label style={formLabel}>Dose</label>
-                <div style={{display:"flex",gap:6}}><input style={{...DS.input,flex:1}} type="number" step="0.1" placeholder={pendingPep.typicalDose} value={pepForm.dose} onChange={e=>setPepForm({...pepForm,dose:e.target.value})}/><select style={{...DS.input,width:80}} value={pepForm.unit} onChange={e=>setPepForm({...pepForm,unit:e.target.value})}>{["mg","mcg","g","IU","mL"].map(u=><option key={u}>{u}</option>)}</select></div>
-                <label style={formLabel}>Frequency</label><input style={DS.input} placeholder={pendingPep.frequency} value={pepForm.frequency} onChange={e=>setPepForm({...pepForm,frequency:e.target.value})}/>
-                <label style={formLabel}>Cycle</label><input style={DS.input} placeholder={pendingPep.cycle} value={pepForm.cycle} onChange={e=>setPepForm({...pepForm,cycle:e.target.value})}/>
+                <div style={{display:"flex",gap:6}}><input style={{...DS.input,flex:1}} type="number" step="0.1" placeholder="Enter your dose" value={pepForm.dose} onChange={e=>setPepForm({...pepForm,dose:e.target.value})}/><select style={{...DS.input,width:80}} value={pepForm.unit} onChange={e=>setPepForm({...pepForm,unit:e.target.value})}>{["mg","mcg","g","IU","mL"].map(u=><option key={u}>{u}</option>)}</select></div>
+                <label style={formLabel}>Frequency</label><input style={DS.input} placeholder="e.g. daily, 2x/week, EOD" value={pepForm.frequency} onChange={e=>setPepForm({...pepForm,frequency:e.target.value})}/>
+                <label style={formLabel}>Cycle</label><input style={DS.input} placeholder="e.g. 8 weeks, ongoing" value={pepForm.cycle} onChange={e=>setPepForm({...pepForm,cycle:e.target.value})}/>
                 <label style={formLabel}>Status</label>
                 <select style={DS.input} value={pepForm.status} onChange={e=>setPepForm({...pepForm,status:e.target.value})}>{["active","planned","completed"].map(o=><option key={o}>{o}</option>)}</select>
                 <label style={formLabel}>Notes</label><input style={DS.input} placeholder="Protocol notes..." value={pepForm.notes} onChange={e=>setPepForm({...pepForm,notes:e.target.value})}/>
@@ -2600,59 +2586,6 @@ Build the workout.`;
                 </div>
               </div>
             </div>
-          </div>
-          <div style={DS.panel}>
-            <div style={{display:"flex",gap:8,marginBottom:showMealPrep||showEatOut?14:0}}>
-              <button onClick={()=>{setShowMealPrep(m=>!m);setShowEatOut(false);}} style={{flex:1,padding:"12px 8px",borderRadius:12,border:`1px solid ${showMealPrep?theme.primary:theme.border}`,background:showMealPrep?theme.primary+"22":"#020617",color:showMealPrep?theme.primary:"#94a3b8",cursor:"pointer",fontFamily:"monospace",fontSize:12,fontWeight:700}}>🍳 Meal Prep</button>
-              <button onClick={()=>{setShowEatOut(m=>!m);setShowMealPrep(false);}} style={{flex:1,padding:"12px 8px",borderRadius:12,border:`1px solid ${showEatOut?theme.primary:theme.border}`,background:showEatOut?theme.primary+"22":"#020617",color:showEatOut?theme.primary:"#94a3b8",cursor:"pointer",fontFamily:"monospace",fontSize:12,fontWeight:700}}>🍽️ Eating Out</button>
-            </div>
-
-            {showMealPrep&&(
-              <div style={{marginTop:4}}>
-                <div style={{fontSize:11,color:"#475569",fontFamily:"monospace",marginBottom:10,lineHeight:1.6}}>Tell me what food you've got. I'll suggest meals that fit your {IS_BULK?"bulk":"cut"}.</div>
-                <div style={{display:"flex",gap:6,marginBottom:10}}>
-                  {[["type","✏️ Type"],["photo","📷 Photo"]].map(([m,l])=>(
-                    <button key={m} onClick={()=>{setMealPrepMode(m);setMealPrepError("");}} style={{flex:1,padding:"8px 4px",borderRadius:10,border:`1px solid ${mealPrepMode===m?theme.primary:"#334155"}`,background:mealPrepMode===m?theme.primary+"22":"#020617",color:mealPrepMode===m?theme.primary:"#64748b",cursor:"pointer",fontSize:11,fontFamily:"monospace",fontWeight:700}}>{l}</button>
-                  ))}
-                </div>
-                {mealPrepMode==="type"&&(
-                  <textarea style={{width:"100%",boxSizing:"border-box",background:"#000000",border:`1px solid ${theme.border}`,color:"#f8fafc",borderRadius:12,padding:"11px 13px",fontSize:13,fontFamily:"monospace",outline:"none",resize:"vertical",minHeight:70,marginBottom:10,lineHeight:1.6}} placeholder="e.g. chicken breast, rice, eggs, broccoli, greek yogurt, olive oil..." value={mealPrepText} onChange={e=>setMealPrepText(e.target.value)}/>
-                )}
-                {mealPrepMode==="photo"&&(
-                  <div style={{marginBottom:10}}>
-                    {!mealPrepImage?(
-                      <div style={{display:"flex",gap:8}}>
-                        <label style={{flex:1,display:"block",background:"#0f172a",border:"1px solid #334155",color:"#e2e8f0",borderRadius:10,padding:"11px",cursor:"pointer",fontFamily:"monospace",fontSize:12,fontWeight:700,textAlign:"center"}}>📷 Photo<input type="file" accept="image/*" capture="environment" style={{display:"none"}} onChange={e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>setMealPrepImage(ev.target.result);r.readAsDataURL(f);e.target.value="";}}/></label>
-                        <label style={{flex:1,display:"block",background:"#1e293b",border:"1px solid #334155",color:"#e2e8f0",borderRadius:10,padding:"11px",cursor:"pointer",fontFamily:"monospace",fontSize:12,fontWeight:700,textAlign:"center"}}>🖼️ Upload<input type="file" accept="image/*" style={{display:"none"}} onChange={e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>setMealPrepImage(ev.target.result);r.readAsDataURL(f);e.target.value="";}}/></label>
-                      </div>
-                    ):(
-                      <div>
-                        <img src={mealPrepImage} alt="Food" style={{width:"100%",maxHeight:200,objectFit:"cover",borderRadius:10,border:"1px solid #1e293b",marginBottom:8}}/>
-                        <button style={{...DS.btn,gridColumn:"unset",width:"100%",background:"#7f1d1d"}} onClick={()=>setMealPrepImage(null)}>Remove Photo</button>
-                      </div>
-                    )}
-                    <textarea style={{width:"100%",boxSizing:"border-box",background:"#000000",border:`1px solid ${theme.border}`,color:"#f8fafc",borderRadius:12,padding:"11px 13px",fontSize:13,fontFamily:"monospace",outline:"none",resize:"vertical",minHeight:50,marginTop:8,lineHeight:1.6}} placeholder="Anything to add? (optional)" value={mealPrepText} onChange={e=>setMealPrepText(e.target.value)}/>
-                  </div>
-                )}
-                {mealPrepError&&<div style={{color:"#ef4444",fontSize:12,fontFamily:"monospace",marginBottom:8,textAlign:"center"}}>{mealPrepError}</div>}
-                <button style={{...DS.btn,gridColumn:"unset",width:"100%",opacity:mealPrepLoading?0.6:1}} onClick={runMealPrep} disabled={mealPrepLoading}>{mealPrepLoading?"Thinking...":"🍳 Get Meal Ideas"}</button>
-                {mealPrepResult&&(
-                  <div style={{marginTop:12,background:"#020617",border:`1px solid ${theme.primary}44`,borderRadius:12,padding:14,fontSize:13,color:"#cbd5e1",fontFamily:"monospace",lineHeight:1.7,whiteSpace:"pre-wrap"}}>{mealPrepResult}</div>
-                )}
-              </div>
-            )}
-
-            {showEatOut&&(
-              <div style={{marginTop:4}}>
-                <div style={{fontSize:11,color:"#475569",fontFamily:"monospace",marginBottom:10,lineHeight:1.6}}>Where are you eating? I'll tell you what to order for your {IS_BULK?"bulk":"cut"}.</div>
-                <input style={{...DS.input,marginBottom:10}} placeholder="e.g. Chipotle, sushi, Italian, a steakhouse..." value={eatOutText} onChange={e=>setEatOutText(e.target.value)} onKeyDown={e=>e.key==="Enter"&&runEatOut()}/>
-                {eatOutError&&<div style={{color:"#ef4444",fontSize:12,fontFamily:"monospace",marginBottom:8,textAlign:"center"}}>{eatOutError}</div>}
-                <button style={{...DS.btn,gridColumn:"unset",width:"100%",opacity:eatOutLoading?0.6:1}} onClick={runEatOut} disabled={eatOutLoading}>{eatOutLoading?"Thinking...":"🍽️ What Should I Order?"}</button>
-                {eatOutResult&&(
-                  <div style={{marginTop:12,background:"#020617",border:`1px solid ${theme.primary}44`,borderRadius:12,padding:14,fontSize:13,color:"#cbd5e1",fontFamily:"monospace",lineHeight:1.7,whiteSpace:"pre-wrap"}}>{eatOutResult}</div>
-                )}
-              </div>
-            )}
           </div>
 
           <div style={DS.panel}>
@@ -2983,14 +2916,13 @@ Build the workout.`;
                 {genWorkout.warmup&&<div style={{background:"#020617",border:`1px solid ${theme.border}`,borderRadius:10,padding:12,marginBottom:12,fontSize:12,color:"#94a3b8",fontFamily:"monospace",lineHeight:1.6}}><b style={{color:theme.primary}}>WARM UP · </b>{genWorkout.warmup}</div>}
 
                 <div style={{display:"flex",flexDirection:"column",gap:8,marginBottom:12}}>
-                 {genWorkout.exercises.map((ex,i)=>(
+                  {genWorkout.exercises.map((ex,i)=>(
                     <div key={i} style={{background:"#020617",border:`1px solid ${theme.border}`,borderLeft:`3px solid ${theme.primary}`,borderRadius:10,padding:12}}>
                       <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8}}>
                         <div style={{flex:1}}>
                           <div style={{fontWeight:700,fontSize:14,color:"#f8fafc"}}>{i+1}. {ex.name}</div>
                           <div style={{fontSize:12,color:theme.primary,fontFamily:"monospace",marginTop:3,fontWeight:700}}>{ex.sets} × {ex.reps}</div>
                           {ex.note&&<div style={{fontSize:11,color:"#94a3b8",fontStyle:"italic",marginTop:4,lineHeight:1.5}}>{ex.note}</div>}
-                          <a href={`https://www.youtube.com/results?search_query=${encodeURIComponent(ex.name+" proper form")}`} target="_blank" rel="noopener noreferrer" style={{display:"inline-block",marginTop:8,fontSize:11,color:"#ef4444",fontFamily:"monospace",fontWeight:700,textDecoration:"none",border:"1px solid #ef444455",borderRadius:6,padding:"4px 10px"}}>▶ Watch Form</a>
                         </div>
                         <div style={{fontSize:10,color:"#475569",fontFamily:"monospace",flexShrink:0,background:"#0f172a",borderRadius:6,padding:"3px 7px"}}>{ex.rest_seconds}s rest</div>
                       </div>
@@ -3400,22 +3332,7 @@ Build the workout.`;
                       <div style={{fontWeight:700,fontSize:14,color:theme.primary,fontFamily:"monospace"}}>{new Date(s.date+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</div>
                       <button style={{...deleteBtn,flexShrink:0}} onClick={()=>setConfirm({label:`Delete scan from ${s.date}?`,onConfirm:()=>setBodyScans(prev=>prev.filter(x=>x.id!==s.id))})}>✕</button>
                     </div>
-                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8}}>
-                      {[["Body Fat",s.bodyfat,"%"],["Muscle",s.muscle,"lb"],["Visceral",s.visceral,""],["Water",s.water,"%"],["BMR",s.bmr,""],["Bone",s.bone,"lb"]].filter(([,v])=>v!=null).map(([l,v,u])=>(
-                        <div key={l} style={{background:"#0f172a",borderRadius:8,padding:"8px",textAlign:"center"}}>
-                          <div style={{fontSize:9,color:"#475569",fontFamily:"monospace",textTransform:"uppercase",letterSpacing:1,marginBottom:3}}>{l}</div>
-                          <div style={{fontSize:15,fontWeight:900,color:theme.primary,fontFamily:"monospace"}}>{v}<span style={{fontSize:10}}>{u}</span></div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      )}
-
+                    <div style={{display:"grid",gridTemplateColum
       {tab==="calculator"&&<PeptideCalculator theme={theme} DS={DS}/>}
     </div>
   );
