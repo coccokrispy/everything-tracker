@@ -88,7 +88,7 @@ const PEPTIDE_LIBRARY = {
     { name:"BPC-157", desc:"Body Protection Compound. Heals gut, tendons, ligaments. Helps GI side effects from GLP-1.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily or BID", cycle:"4-12 weeks" },
     { name:"TB-500 (Thymosin Beta-4)", desc:"Systemic tissue repair. Reduces inflammation, accelerates healing.", typicalDose:"2-5mg", unit:"mg", frequency:"2x/week loading", cycle:"4-6 weeks" },
     { name:"TB-4 Fragment", desc:"Ac-SDKP fragment of Thymosin Beta-4. Anti-inflammatory, cardiac and kidney protection.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
-    { name:"BPC-157 + TB-500", desc:"Combined stack for maximum healing. Synergistic local + systemic.", typicalDose:"250mcg / 2mg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
+    { name:"WOLVERINE STACK", desc:"Combined stack for maximum healing. Synergistic local + systemic.", typicalDose:"250mcg / 2mg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
     { name:"Pentadeca Arginate (PDA)", desc:"BPC-157 derivative. Enhanced tissue repair, gut healing, and anti-inflammatory. More stable than BPC-157.", typicalDose:"250-500mcg", unit:"mcg", frequency:"Daily", cycle:"4-12 weeks" },
     { name:"KPV", desc:"Anti-inflammatory tripeptide. Gut healing, skin conditions, IBD.", typicalDose:"500mcg-1mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
     { name:"GHK-Cu", desc:"Copper peptide. Skin regeneration, collagen synthesis, anti-aging.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"8-12 weeks" },
@@ -98,6 +98,7 @@ const PEPTIDE_LIBRARY = {
     { name:"KLOW (GHK-Cu + BPC-157 + TB-500 + KPV)", desc:"Enhanced GLOW with KPV added for extra anti-inflammatory and gut/skin healing. Comprehensive recovery, skin, and gut repair blend.", typicalDose:"Per blend", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
   ],
   "Mitochondrial / Longevity": [
+    { name:"NAD+", desc:"Cellular energy and DNA repair coenzyme. Boosts mitochondrial function, metabolism, and longevity. Subcutaneous injection, go slow — fast dosing causes flushing/nausea.", typicalDose:"50-100mg", unit:"mg", frequency:"Daily or 2-3x/week", cycle:"Ongoing" },
     { name:"MOTS-c", desc:"Mitochondrial peptide. AMPK activation. Boosts fat oxidation and insulin sensitivity.", typicalDose:"5-10mg", unit:"mg", frequency:"Weekly", cycle:"8-12 wk on, 4mo off" },
     { name:"Humanin", desc:"Mitochondria-derived. Neuroprotective, anti-aging, cardioprotective.", typicalDose:"2-4mg", unit:"mg", frequency:"Weekly", cycle:"8-12 weeks" },
     { name:"SS-31 (Elamipretide)", desc:"Targets mitochondrial inner membrane. Reduces oxidative stress.", typicalDose:"1-4mg", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
