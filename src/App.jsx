@@ -94,6 +94,8 @@ const PEPTIDE_LIBRARY = {
     { name:"GHK-Cu", desc:"Copper peptide. Skin regeneration, collagen synthesis, anti-aging.", typicalDose:"1-2mg", unit:"mg", frequency:"Daily", cycle:"8-12 weeks" },
     { name:"LL-37", desc:"Antimicrobial peptide. Immune modulation, wound healing, anti-biofilm.", typicalDose:"100-500mcg", unit:"mcg", frequency:"Daily", cycle:"4-8 weeks" },
     { name:"Thymosin Alpha-1", desc:"Immune modulator. Used in cancer/viral protocols.", typicalDose:"1.6mg", unit:"mg", frequency:"2x/week", cycle:"6-12 months" },
+    { name:"GLOW (GHK-Cu + BPC-157 + TB-500)", desc:"Recovery + skin blend. GHK-Cu for collagen/skin, BPC-157 and TB-500 for systemic healing. Popular all-in-one repair and anti-aging stack.", typicalDose:"Per blend", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
+    { name:"KLOW (GHK-Cu + BPC-157 + TB-500 + KPV)", desc:"Enhanced GLOW with KPV added for extra anti-inflammatory and gut/skin healing. Comprehensive recovery, skin, and gut repair blend.", typicalDose:"Per blend", unit:"mg", frequency:"Daily", cycle:"4-8 weeks" },
   ],
   "Mitochondrial / Longevity": [
     { name:"MOTS-c", desc:"Mitochondrial peptide. AMPK activation. Boosts fat oxidation and insulin sensitivity.", typicalDose:"5-10mg", unit:"mg", frequency:"Weekly", cycle:"8-12 wk on, 4mo off" },
