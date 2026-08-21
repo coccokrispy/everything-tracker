@@ -642,6 +642,10 @@ export default function App() {
   const [doseNoteText,setDoseNoteText]=useState("");
   const [editingGoal,setEditingGoal]=useState(false);
   const [showFullChart,setShowFullChart]=useState(false);
+  const [measurements,setMeasurements]=usePersistedState("axion_measurements",[]);
+  const [measView,setMeasView]=useState("idle");
+  const [measForm,setMeasForm]=useState({date:todayISO(),neck_in:"",neck_cm:"",shoulders_in:"",shoulders_cm:"",chest_in:"",chest_cm:"",larm_in:"",larm_cm:"",rarm_in:"",rarm_cm:"",forearm_in:"",forearm_cm:"",waist_in:"",waist_cm:"",hips_in:"",hips_cm:"",lthigh_in:"",lthigh_cm:"",rthigh_in:"",rthigh_cm:"",lcalf_in:"",lcalf_cm:"",rcalf_in:"",rcalf_cm:""});
+  const [measError,setMeasError]=useState("");
   const [bodyScans,setBodyScans]=usePersistedState("axion_body_scans",[]);
   const [bodyView,setBodyView]=useState("idle");
   const [bodyImage,setBodyImage]=useState(null);
@@ -2285,17 +2289,86 @@ Build the workout.`;
             </div>
           )}
         </div>
-      )}  
+      )}
+
+      {tab==="weight"&&(
+        <div style={DS.panel}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
+            <h2 style={{margin:0,fontSize:15,fontWeight:700,color:"#94a3b8",fontFamily:"monospace"}}>📏 Measurements</h2>
+            {measView==="idle"&&<button onClick={()=>{setMeasForm({date:todayISO(),neck_in:"",neck_cm:"",shoulders_in:"",shoulders_cm:"",chest_in:"",chest_cm:"",larm_in:"",larm_cm:"",rarm_in:"",rarm_cm:"",forearm_in:"",forearm_cm:"",waist_in:"",waist_cm:"",hips_in:"",hips_cm:"",lthigh_in:"",lthigh_cm:"",rthigh_in:"",rthigh_cm:"",lcalf_in:"",lcalf_cm:"",rcalf_in:"",rcalf_cm:""});setMeasView("add");setMeasError("");}} style={{background:theme.primary+"22",border:`1px solid ${theme.primary}`,color:theme.primary,borderRadius:8,padding:"6px 12px",cursor:"pointer",fontFamily:"monospace",fontSize:11,fontWeight:700}}>+ Log</button>}
+          </div>
+          <div style={{fontSize:10,color:"#475569",fontFamily:"monospace",marginBottom:14,lineHeight:1.6}}>Track your body part measurements over time. Log inches and cm for an exact record.</div>
+
+          {measView==="add"&&(
+            <div>
+              <div style={{marginBottom:12}}>
+                <div style={{fontSize:11,color:"#64748b",fontFamily:"monospace",textTransform:"uppercase",letterSpacing:1,marginBottom:6}}>Date</div>
+                <input style={{...DS.input,width:"auto",minWidth:160}} type="date" value={measForm.date} onChange={e=>setMeasForm({...measForm,date:e.target.value})}/>
+              </div>
+              {[["Neck","neck"],["Shoulders","shoulders"],["Chest","chest"],["Left Arm","larm"],["Right Arm","rarm"],["Forearm","forearm"],["Waist","waist"],["Hips","hips"],["Left Thigh","lthigh"],["Right Thigh","rthigh"],["Left Calf","lcalf"],["Right Calf","rcalf"]].map(([label,key])=>(
+                <div key={key} style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,alignItems:"center",marginBottom:8}}>
+                  <div style={{fontSize:12,color:"#94a3b8",fontFamily:"monospace",fontWeight:700}}>{label}</div>
+                  <input style={{...DS.input,fontSize:13}} type="number" step="0.1" placeholder="inches" value={measForm[key+"_in"]} onChange={e=>setMeasForm({...measForm,[key+"_in"]:e.target.value})}/>
+                  <input style={{...DS.input,fontSize:13}} type="number" step="0.1" placeholder="cm" value={measForm[key+"_cm"]} onChange={e=>setMeasForm({...measForm,[key+"_cm"]:e.target.value})}/>
+                </div>
+              ))}
+              {measError&&<div style={{color:"#ef4444",fontSize:12,fontFamily:"monospace",margin:"8px 0",textAlign:"center"}}>{measError}</div>}
+              <div style={{display:"flex",gap:8,marginTop:12}}>
+                <button style={{...DS.btn,gridColumn:"unset",flex:1,background:"#1e293b",color:"#94a3b8"}} onClick={()=>{setMeasView("idle");setMeasError("");}}>Cancel</button>
+                <button style={{...DS.btn,gridColumn:"unset",flex:2}} onClick={()=>{
+                  const keys=["neck","shoulders","chest","larm","rarm","forearm","waist","hips","lthigh","rthigh","lcalf","rcalf"];
+                  const hasData=keys.some(k=>measForm[k+"_in"]!==""||measForm[k+"_cm"]!=="");
+                  if(!hasData){setMeasError("Enter at least one measurement.");return;}
+                  const entry={id:uid(),date:measForm.date};
+                  keys.forEach(k=>{entry[k+"_in"]=measForm[k+"_in"]?+measForm[k+"_in"]:null;entry[k+"_cm"]=measForm[k+"_cm"]?+measForm[k+"_cm"]:null;});
+                  setMeasurements(prev=>[...(prev||[]),entry]);
+                  setMeasView("idle");setMeasError("");
+                  flash("Measurements saved ✓");
+                }}>Save</button>
+              </div>
+            </div>
+          )}
+
+          {measView==="idle"&&(
+            (measurements||[]).length===0?(
+              <div style={{color:"#475569",fontSize:13,fontFamily:"monospace",textAlign:"center",padding:"12px 0"}}>No measurements logged yet. Tap + Log to start.</div>
+            ):(
+              <div>
+                {[...(measurements||[])].sort((a,b)=>new Date(b.date)-new Date(a.date)).map(m=>{
+                  const parts=[["Neck","neck"],["Shoulders","shoulders"],["Chest","chest"],["Left Arm","larm"],["Right Arm","rarm"],["Forearm","forearm"],["Waist","waist"],["Hips","hips"],["Left Thigh","lthigh"],["Right Thigh","rthigh"],["Left Calf","lcalf"],["Right Calf","rcalf"]].filter(([,k])=>m[k+"_in"]!=null||m[k+"_cm"]!=null);
+                  return(
+                    <div key={m.id} style={{background:"#020617",border:`1px solid ${theme.border}`,borderRadius:12,padding:14,marginBottom:8}}>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+                        <div style={{fontWeight:700,fontSize:14,color:theme.primary,fontFamily:"monospace"}}>{new Date(m.date+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</div>
+                        <button style={{...deleteBtn,flexShrink:0}} onClick={()=>setConfirm({label:`Delete measurements from ${m.date}?`,onConfirm:()=>setMeasurements(prev=>prev.filter(x=>x.id!==m.id))})}>✕</button>
+                      </div>
+                      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
+                        {parts.map(([label,k])=>(
+                          <div key={k} style={{background:"#0f172a",borderRadius:8,padding:"8px 10px"}}>
+                            <div style={{fontSize:9,color:"#475569",fontFamily:"monospace",textTransform:"uppercase",letterSpacing:1,marginBottom:3}}>{label}</div>
+                            <div style={{fontSize:13,fontWeight:900,color:theme.primary,fontFamily:"monospace"}}>{m[k+"_in"]!=null?`${m[k+"_in"]}"`:""}{m[k+"_in"]!=null&&m[k+"_cm"]!=null?" / ":""}{m[k+"_cm"]!=null?`${m[k+"_cm"]}cm`:""}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )
+          )}
+        </div>
+      )}
 
       {/* DOSES TAB */}
       {tab==="doses"&&(
         <div>
-          {(peptideStack||[]).length===0&&(
-            <div style={{...DS.panel,textAlign:"center",color:"#475569",fontFamily:"monospace",fontSize:13}}>No peptides in your stack yet.<br/>Add peptides in the 🧬 Peptides tab first.</div>
+          {(peptideStack||[]).filter(p=>p.status!=="completed").length===0&&(
+            <div style={{...DS.panel,textAlign:"center",color:"#475569",fontFamily:"monospace",fontSize:13}}>No active peptides to dose.<br/>Add peptides in the 🧬 Peptides tab, or reactivate a completed protocol.</div>
           )}
-          {(peptideStack||[]).length>0&&(()=>{
-            const activePep=doseTab||(peptideStack[0]?.id);
-            const pep=(peptideStack||[]).find(p=>p.id===activePep)||peptideStack[0];
+          {(peptideStack||[]).filter(p=>p.status!=="completed").length>0&&(()=>{
+            const doseStack=(peptideStack||[]).filter(p=>p.status!=="completed");
+            const activePep=doseTab||(doseStack[0]?.id);
+            const pep=doseStack.find(p=>p.id===activePep)||doseStack[0];
             if(!pep)return null;
             const logs=(peptideLogs[pep.id]||[]).slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
             const total=logs.reduce((s,l)=>s+Number(l.dose||0),0);
@@ -2305,8 +2378,8 @@ Build the workout.`;
               <div>
                 {/* PEPTIDE TABS */}
                 <div style={{display:"flex",gap:6,overflowX:"auto",paddingBottom:8,marginBottom:14,scrollbarWidth:"none"}}>
-                  {(peptideStack||[]).map(p=>{
-                    const isActive=(doseTab||peptideStack[0]?.id)===p.id;
+                  {doseStack.map(p=>{
+                    const isActive=(doseTab||doseStack[0]?.id)===p.id;
                     return(
                       <button key={p.id} onClick={()=>setDoseTab(p.id)} style={{flexShrink:0,padding:"8px 14px",borderRadius:10,border:`1px solid ${isActive?theme.primary:"#334155"}`,background:isActive?theme.primary+"22":"#020617",color:isActive?theme.primary:"#64748b",fontFamily:"monospace",fontSize:11,fontWeight:700,cursor:"pointer",transition:"all 0.15s"}}>
                         {p.name.length>14?p.name.slice(0,14)+"...":p.name}
@@ -2404,8 +2477,8 @@ Build the workout.`;
             </div>
           )}
           {pepView==="stack"&&<>
-            {(peptideStack||[]).length===0&&<div style={{color:"#475569",fontSize:13,fontFamily:"monospace",padding:"12px 0"}}>No peptides yet. Browse the library to add.</div>}
-            {(peptideStack||[]).map(p=>{
+            {(peptideStack||[]).filter(p=>p.status!=="completed").length===0&&<div style={{color:"#475569",fontSize:13,fontFamily:"monospace",padding:"12px 0"}}>No active peptides. Browse the library to add.</div>}
+            {(peptideStack||[]).filter(p=>p.status!=="completed").map(p=>{
               const sc={active:theme.primary,planned:"#fbbf24",completed:"#64748b"};
               const logs=peptideLogs[p.id]||[];
               const total=logs.reduce((s,l)=>s+Number(l.dose||0),0);
@@ -2427,6 +2500,7 @@ Build the workout.`;
                     </div>
                     <div style={{display:"flex",gap:6,flexShrink:0}}>
                       <button onClick={()=>{setEditingPep(p);setPepForm({dose:p.dose==="—"?"":p.dose,unit:p.unit,frequency:p.frequency,cycle:p.cycle,notes:p.notes||"",status:p.status,pinDays:p.pinDays||[],reminderEnabled:p.reminderEnabled||false,reminderTime:p.reminderTime||"08:00"});setPepView("edit");}} style={{background:"#0f172a",border:"1px solid #1e293b",color:"#60a5fa",cursor:"pointer",borderRadius:6,padding:"4px 8px",fontSize:11}}>Edit</button>
+                      <button onClick={()=>setConfirm({label:`Mark ${p.name} as a completed protocol? Reminders stop, but all your dose data is kept.`,onConfirm:()=>setPeptideStack(prev=>prev.map(x=>x.id===p.id?{...x,status:"completed",reminderEnabled:false}:x))})} style={{background:"#0f172a",border:"1px solid #14532d",color:"#4ade80",cursor:"pointer",borderRadius:6,padding:"4px 8px",fontSize:11}}>✓ Done</button>
                       <button onClick={()=>setConfirm({label:`Remove ${p.name} from your stack?`,onConfirm:()=>deletePep(p.id)})} style={{background:"transparent",border:"1px solid #450a0a",color:"#ef4444",cursor:"pointer",borderRadius:6,padding:"4px 8px",fontSize:11}}>✕</button>
                     </div>
                   </div>
@@ -2434,6 +2508,34 @@ Build the workout.`;
               );
             })}
             <button style={{...DS.btn,marginTop:8}} onClick={()=>setPepView("cats")}>+ Add Peptide</button>
+
+            {(peptideStack||[]).filter(p=>p.status==="completed").length>0&&(
+              <div style={{marginTop:24,paddingTop:18,borderTop:`1px solid ${theme.border}`}}>
+                <div style={{fontSize:13,fontWeight:700,color:"#64748b",fontFamily:"monospace",letterSpacing:1,marginBottom:12}}>✓ COMPLETED PROTOCOLS</div>
+                {(peptideStack||[]).filter(p=>p.status==="completed").map(p=>{
+                  const logs=peptideLogs[p.id]||[];
+                  const total=logs.reduce((s,l)=>s+Number(l.dose||0),0);
+                  return(
+                    <div key={p.id} style={{background:"#020617",border:"1px solid #1e293b",borderLeft:"3px solid #64748b",borderRadius:12,padding:14,marginBottom:10,opacity:0.85}}>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
+                        <div style={{flex:1}}>
+                          <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
+                            <span style={{fontSize:15,fontWeight:700,color:"#94a3b8"}}>{p.name}</span>
+                            <span style={{fontSize:10,fontFamily:"monospace",background:"#64748b22",color:"#64748b",borderRadius:4,padding:"2px 7px"}}>COMPLETED</span>
+                          </div>
+                          <div style={{fontSize:11,color:"#475569",fontFamily:"monospace",marginTop:4}}>Total logged: {total.toFixed(3)}{p.unit} · {logs.length} doses</div>
+                          {p.notes&&<div style={{fontSize:11,color:"#64748b",marginTop:4,fontStyle:"italic"}}>{p.notes}</div>}
+                        </div>
+                        <div style={{display:"flex",flexDirection:"column",gap:6,flexShrink:0}}>
+                          <button onClick={()=>setPeptideStack(prev=>prev.map(x=>x.id===p.id?{...x,status:"active"}:x))} style={{background:"#0f172a",border:`1px solid ${theme.primary}`,color:theme.primary,cursor:"pointer",borderRadius:6,padding:"4px 8px",fontSize:11,fontWeight:700}}>↺ Reactivate</button>
+                          <button onClick={()=>setConfirm({label:`Permanently delete ${p.name} and all its dose history?`,onConfirm:()=>deletePep(p.id)})} style={{background:"transparent",border:"1px solid #450a0a",color:"#ef4444",cursor:"pointer",borderRadius:6,padding:"4px 8px",fontSize:11}}>Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </>}
           {pepView==="edit"&&editingPep&&(
             <div>
